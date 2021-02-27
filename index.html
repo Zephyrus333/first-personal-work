@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>词云图</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/echarts/5.0.1/echarts.js"></script>
+    <script src="echarts-wordcloud.js"></script>
+    <style>
+        html,
+        body,
+        #main {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main"></div>
+    <script>
+        var chart = echarts.init(document.getElementById('main'));
+        var option = {
+            tooltip: {
+                show: true
+            },
+            series: [{
+                type: 'wordCloud',
+                gridSize: 2,
+                sizeRange: [10, 100],
+                rotationRange: [-90, 90],
+                rotationStep: 45,
+                shape: 'circular',
+                drawOutOfBound: false,
+                //maskImage:maskImage,
+                textStyle: {
+                    color: function () {
+                        return 'rgb(' + [
+                            Math.round(Math.random() * 100),
+                            Math.round(Math.random() * 100),
+                            Math.round(Math.random() * 100)
+                        ].join(',') + ')';
+                    }
+                },
+
+                emphasis: {
+                    textStyle: {
+                        color: 'red'
+                    }
+                },
+
+    data: [
+        {"name": "我们", "value": 481}, {"name": "致敬", "value": 423}, {"name": "疫情", "value": 347}, {"name": "中国", "value": 324}, {"name": "武汉", "value": 309}, {"name": "感谢", "value": 289}, {"name": "你们", "value": 288}, {"name": "加油", "value": 261}, {"name": "真的", "value": 258}, {"name": "英雄", "value": 242}, {"name": "没有", "value": 214}, {"name": "所有", "value": 207}, {"name": "医护人员", "value": 196}, {"name": "医生", "value": 188}, {"name": "感动", "value": 185}, {"name": "一个", "value": 183}, {"name": "一起", "value": 177}, {"name": "这个", "value": 177}, {"name": "电视剧", "value": 167}, {"name": "他们", "value": 166}, {"name": "自己", "value": 161}, {"name": "抗疫", "value": 156}, {"name": "行者", "value": 150}, {"name": "不敢", "value": 149}, {"name": "这部", "value": 147}, {"name": "伟大", "value": 135}, {"name": "人民", "value": 133}, {"name": "看到", "value": 131}, {"name": "一线", "value": 131}, {"name": "时候", "value": 126}, {"name": "祖国", "value": 126}, {"name": "演员", "value": 125}, {"name": "最美", "value": 123}, {"name": "知道", "value": 123}, {"name": "希望", "value": 120}, {"name": "就是", "value": 115}, {"name": "大家", "value": 113}, {"name": "因为", "value": 109}, {"name": "辛苦", "value": 108}, {"name": "还是", "value": 107}, {"name": "那些", "value": 101}, {"name": "现在", "value": 101}, {"name": "真实", "value": 100}, {"name": "护士", "value": 99}, {"name": "导演", "value": 99}, {"name": "一直", "value": 98}, {"name": "付出", "value": 98}, {"name": "当时", "value": 95}, {"name": "眼泪", "value": 90}, {"name": "这么", "value": 90}, {"name": "什么", "value": 88}, {"name": "国家", "value": 87}, {"name": "但是", "value": 86}, {"name": "医院", "value": 80}, {"name": "生命", "value": 79}, {"name": "点赞", "value": 77}, {"name": "白衣天使", "value": 77}, {"name": "看着", "value": 74}, {"name": "院长", "value": 73}, {"name": "不是", "value": 72}, {"name": "湖北", "value": 69}, {"name": "终于", "value": 69}, {"name": "开始", "value": 69}, {"name": "期间", "value": 68}, {"name": "一位", "value": 63}, {"name": "感觉", "value": 63}, {"name": "这些", "value": 63}, {"name": "可以", "value": 62}, {"name": "害怕", "value": 62}, {"name": "一样", "value": 61}, {"name": "作为", "value": 61}, {"name": "病毒", "value": 61}, {"name": "为了", "value": 60}, {"name": "全国", "value": 60}, {"name": "那么", "value": 59}, {"name": "虽然", "value": 59}, {"name": "觉得", "value": 57}, {"name": "应该", "value": 56}, {"name": "还有", "value": 56}, {"name": "张嘉译", "value": 56}, {"name": "一部", "value": 55}, {"name": "工作者", "value": 55}, {"name": "心里", "value": 54}, {"name": "那个", "value": 54}, {"name": "不要", "value": 53}, {"name": "人们", "value": 53}, {"name": "医护", "value": 53}, {"name": "谢谢", "value": 51}, {"name": "这次", "value": 50}, {"name": "志愿者", "value": 50}, {"name": "强大", "value": 50}, {"name": "特别", "value": 50}, {"name": "今年", "value": 49}, {"name": "每个", "value": 49}, {"name": "感恩", "value": 49}, {"name": "口罩", "value": 48}, {"name": "经历", "value": 48}, {"name": "前行", "value": 48}, {"name": "片酬", "value": 47}, {"name": "很多", "value": 47}, {"name": "感人", "value": 47}, {"name": "负重", "value": 47}, {"name": "谢谢你们", "value": 46}, {"name": "怎么", "value": 46}, {"name": "流泪", "value": 45}, {"name": "这样", "value": 45}, {"name": "第一集", "value": 45}, {"name": "为什么", "value": 45}, {"name": "不能", "value": 44}, {"name": "过去", "value": 44}, {"name": "电视", "value": 44}, {"name": "每天", "value": 43}, {"name": "一切", "value": 43}, {"name": "工作", "value": 43}, {"name": "人员", "value": 43}, {"name": "好好", "value": 43}, {"name": "如果", "value": 42}, {"name": "努力", "value": 42}, {"name": "过来", "value": 41}, {"name": "2020", "value": 41}, {"name": "只有", "value": 41}, {"name": "骄傲", "value": 40}, {"name": "好看", "value": 40}, {"name": "只是", "value": 40}, {"name": "评分", "value": 39}, {"name": "中秋", "value": 39}, {"name": "有人", "value": 39}, {"name": "新冠", "value": 39}, {"name": "这是", "value": 39}, {"name": "已经", "value": 39}, {"name": "喜欢", "value": 38}, {"name": "期待", "value": 38}]
+            }]
+        };
+        chart.setOption(option);
+        window.onresize = function () {
+            chart.resize();
+        }
+    </script>
+</body>
+</html>
